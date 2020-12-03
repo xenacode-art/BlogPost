@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
+    <div class="col-md-8 card mb-10  mt-8 left top ">
       <div class="card-body">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
@@ -12,7 +12,7 @@
     </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
 
-    <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="col-md-8 card mb-8  mt-8 ">
       <div class="card-body">
         <!-- comments -->
         {% with comments.count as total_comments %}
@@ -22,7 +22,7 @@
           {% endwith %} {% for comment in comments %}
         </p>
 
-        <div class="comments" style="padding: 10px;">
+        <div class="comments" style="padding: 10pt;">
           <p class="font-weight-bold">
             {{ comment.name }}
             <span class=" text-muted font-weight-normal">
@@ -35,7 +35,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="col-md-8 card mb-8  mt-8 ">
       <div class="card-body">
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
